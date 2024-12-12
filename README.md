@@ -1,4 +1,4 @@
-# 🎮 Tic Tac Toe
+# 🎮 Tic-Tac-Toe
 
 A classic Tic Tac Toe game built with PyGame - my first step into game development!
 
