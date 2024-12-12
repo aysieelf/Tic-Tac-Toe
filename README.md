@@ -12,7 +12,7 @@ A classic Tic Tac Toe game built with PyGame - my first step into game developme
 - [ ] Final polish
 
 ## 🎯 Project Goals
-- Create a fully functional Tic Tac Toe game
+- Create a fully functional Tic-Tac-Toe game
 - Learn PyGame basics
 - Practice clean code organization in game development
 
