@@ -7,7 +7,7 @@ def handle_click(pos: tuple, game_state: GameState, player) -> int:
     row, col = get_cell_from_mouse(pos)
     if game_state.grid[row][col] == 0:
         game_state.grid[row][col] = player
-        print([row for row in game_state.grid])
+        print(game_state.grid)
         player *= -1
         return player
     return player
@@ -37,3 +37,10 @@ def check_winner(game_state: GameState) -> bool:
         return True
 
     return False
+
+def check_draw(game_state: GameState) -> bool:
+    for row in game_state.grid:
+        if any(num for num in row if num == 0):
+            return False
+
+    return True

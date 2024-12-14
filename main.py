@@ -1,5 +1,5 @@
 from src import constants as c
-from src.game_logic import handle_click, check_winner
+from src.game_logic import handle_click, check_winner, check_draw
 from src.game_state import GameState
 from src.graphics import draw_board
 
@@ -15,6 +15,7 @@ def main():
     clicked = False
     player = 1
     game_over = False
+    winner = "No one"
 
     while run:
         # event handlers
@@ -30,8 +31,12 @@ def main():
                 if check_winner(game_state):
                     winner = "X" if player == -1 else "O"
                     game_over = True
-                    print(f"Game Over! {winner} wins!")
 
+                if check_draw(game_state):
+                    game_over = True
+
+                if game_over:
+                    print(f"Game Over! {winner} wins!")
         screen.fill(c.BACKGROUND_COLOR)
         draw_board(screen, game_state)
         pygame.display.flip()
