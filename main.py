@@ -16,9 +16,9 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-            if event.type == pygame.MOUSEBUTTONDOWN and clicked == False:
+            if event.type == pygame.MOUSEBUTTONDOWN and not clicked:
                 clicked = True
-            if event.type == pygame.MOUSEBUTTONUP and clicked == True:
+            if event.type == pygame.MOUSEBUTTONUP and clicked:
                 clicked = False
                 handle_click(pygame.mouse.get_pos(), game_state)
 
