@@ -1,8 +1,10 @@
-import pygame
 from src import constants as c
-from src.game_state import GameState
 from src.game_logic import handle_click
+from src.game_state import GameState
 from src.graphics import draw_grid
+
+import pygame
+
 
 def main():
     pygame.init()
@@ -32,6 +34,7 @@ def main():
         pygame.display.flip()
 
     pygame.quit()
+
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,7 @@
+from src import constants as c
+
 import pygame
 
-from src import constants as c
 
 def draw_grid(screen):
     # draw vertical lines
