@@ -1,6 +1,6 @@
+from src import constants as c
 from src.game_state import GameState
 from src.utils import get_cell_from_mouse
-from src import constants as c
 
 
 def handle_click(pos: tuple, game_state: GameState, player) -> int:
@@ -37,6 +37,7 @@ def check_winner(game_state: GameState) -> bool:
         return True
 
     return False
+
 
 def check_draw(game_state: GameState) -> bool:
     for row in game_state.grid:
