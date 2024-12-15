@@ -1,8 +1,8 @@
-import pygame
-
 from src import constants as c
 from src.game_loop import game_loop
 from src.game_state import GameState
+
+import pygame
 
 
 def main():

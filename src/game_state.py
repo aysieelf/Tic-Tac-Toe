@@ -20,7 +20,6 @@ class GameState:
     def winner(self) -> str | None:
         return self._winner
 
-
     def make_move(self, row: int, col: int) -> bool:
         if self._game_over or self.grid[row][col] != 0:
             return False

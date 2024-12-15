@@ -1,9 +1,9 @@
-import pygame
-
+from src import constants as c
+from src.game_state import GameState
 from src.graphics import draw_board
 from src.utils import get_cell_from_mouse
-from src.game_state import GameState
-from src import constants as c
+
+import pygame
 
 
 def game_loop(screen: pygame.Surface, game_state: GameState):
