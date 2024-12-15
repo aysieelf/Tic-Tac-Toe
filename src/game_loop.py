@@ -1,6 +1,6 @@
 from src import constants as c
 from src.game_state import GameState
-from src.graphics import draw_board
+from src.graphics import draw_board, draw_title
 from src.utils import get_cell_from_mouse
 
 import pygame
@@ -27,5 +27,9 @@ def game_loop(screen: pygame.Surface, game_state: GameState):
                 game_state.make_move(row, col)
 
         screen.fill(c.BACKGROUND_COLOR)
-        draw_board(screen, game_state)
+
+        if game_state._in_start_screen:
+            draw_title(screen)
+        else:
+            draw_board(screen, game_state)
         pygame.display.flip()

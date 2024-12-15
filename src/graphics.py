@@ -58,3 +58,52 @@ def draw_board(screen, game_state):
                 draw_x(screen, row, col)
             elif game_state.grid[row][col] == -1:
                 draw_o(screen, row, col)
+
+
+def draw_start_screen(screen: pygame.Surface):
+    screen.fill(c.BACKGROUND_COLOR)
+
+    draw_title(screen)
+    draw_start_button(screen)
+
+
+    # 4. Добави декоративни елементи (по желание)
+    # - може би X и O символи около заглавието
+    # - някаква проста анимация
+
+    # 5. Добави кратки правила/инструкции под бутона
+    # - малък текст с основните правила
+
+def draw_title(screen: pygame.Surface):
+    title_font = pygame.font.SysFont(c.TITLE_FONT, c.TITLE_FONT_SIZE)
+    title_surface = title_font.render(c.TITLE_TEXT, True, c.TITLE_COLOR)
+    title_rect = title_surface.get_rect(
+        centerx=c.WINDOW_SIZE // 2,
+        y=c.TITLE_Y_POS
+    )
+
+    screen.blit(title_surface, title_rect)
+
+def draw_start_button(screen: pygame.Surface):
+    button_rect = pygame.Rect(
+        (c.WINDOW_SIZE - c.START_BUTTON_WIDTH) // 2,
+        (c.WINDOW_SIZE - c.START_BUTTON_HEIGHT) // 2,
+        c.START_BUTTON_WIDTH,
+        c.START_BUTTON_HEIGHT
+    )
+
+    mouse_pos = pygame.mouse.get_pos()
+    if button_rect.collidepoint(mouse_pos):
+        button_color = c.START_BUTTON_HOVER_COLOR
+    else:
+        button_color = c.START_BUTTON_COLOR
+
+    pygame.draw.rect(screen, button_color, button_rect)
+
+    button_font = pygame.font.SysFont(None, c.START_BUTTON_FONT_SIZE)
+    button_surface = button_font.render(c.START_BUTTON_TEXT, True, c.TITLE_COLOR)
+    text_rect = button_surface.get_rect(center=button_rect.center)
+
+    screen.blit(button_surface, text_rect)
+
+    return button_rect

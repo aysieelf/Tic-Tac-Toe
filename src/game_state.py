@@ -7,6 +7,7 @@ class GameState:
         self._current_player = 1
         self._game_over = False
         self._winner = None
+        self._in_start_screen = True
 
     @property
     def current_player(self) -> int:
@@ -19,6 +20,10 @@ class GameState:
     @property
     def winner(self) -> str | None:
         return self._winner
+
+    @property
+    def in_start_screen(self) -> bool:
+        return self._in_start_screen
 
     def make_move(self, row: int, col: int) -> bool:
         if self._game_over or self.grid[row][col] != 0:
@@ -73,3 +78,4 @@ class GameState:
         self._current_player = 1
         self._game_over = False
         self._winner = None
+        self._in_start_screen = True
