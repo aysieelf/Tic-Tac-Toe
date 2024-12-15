@@ -25,6 +25,9 @@ class GameState:
     def in_start_screen(self) -> bool:
         return self._in_start_screen
 
+    def start_game(self):
+        self._in_start_screen = False
+
     def make_move(self, row: int, col: int) -> bool:
         if self._game_over or self.grid[row][col] != 0:
             return False
