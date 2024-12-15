@@ -14,6 +14,11 @@ def game_loop(screen: pygame.Surface, game_state: GameState):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_r:
+                    game_state.reset()
+
             if event.type == pygame.MOUSEBUTTONDOWN and not clicked:
                 clicked = True
             if event.type == pygame.MOUSEBUTTONUP and clicked:

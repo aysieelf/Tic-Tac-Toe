@@ -67,3 +67,9 @@ class GameState:
 
         if self._check_draw():
             self._game_over = True
+
+    def reset(self):
+        self.grid = [[0] * c.GRID_SIZE for _ in range(c.GRID_SIZE)]
+        self._current_player = 1
+        self._game_over = False
+        self._winner = None
