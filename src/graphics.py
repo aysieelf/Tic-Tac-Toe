@@ -1,3 +1,5 @@
+import math
+
 from src import constants as c
 
 import pygame
@@ -66,14 +68,6 @@ def draw_start_screen(screen: pygame.Surface):
     draw_title(screen)
     draw_start_button(screen)
 
-
-    # 4. Добави декоративни елементи (по желание)
-    # - може би X и O символи около заглавието
-    # - някаква проста анимация
-
-    # 5. Добави кратки правила/инструкции под бутона
-    # - малък текст с основните правила
-
 def draw_title(screen: pygame.Surface):
     title_font = pygame.font.SysFont(c.TITLE_FONT, c.TITLE_FONT_SIZE)
     title_surface = title_font.render(c.TITLE_TEXT, True, c.TITLE_COLOR)
@@ -87,7 +81,7 @@ def draw_title(screen: pygame.Surface):
 def draw_start_button(screen: pygame.Surface):
     button_rect = pygame.Rect(
         (c.WINDOW_SIZE - c.START_BUTTON_WIDTH) // 2,
-        (c.WINDOW_SIZE - c.START_BUTTON_HEIGHT) // 2,
+        (c.WINDOW_SIZE - c.START_BUTTON_HEIGHT * 2.5),
         c.START_BUTTON_WIDTH,
         c.START_BUTTON_HEIGHT
     )
