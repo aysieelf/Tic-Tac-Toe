@@ -3,11 +3,11 @@
 A classic Tic Tac Toe game built with PyGame - my first step into game development!
 
 ## ⏳ Current Progress
-[▓░░░░░░░░░] 10%
+[▓▓▓▓▓░░░░░] 52%
 
 - [x] Project setup
-- [ ] Basic game mechanics
-- [ ] Win/Draw logic
+- [x] Basic game mechanics
+- [x] Win/Draw logic
 - [ ] UI implementation
 - [ ] Final polish
 
@@ -24,11 +24,18 @@ A classic Tic Tac Toe game built with PyGame - my first step into game developme
 - Restart game option
 
 ## 📚 What I Learned
-- [ ] ...
+- Game loop fundamentals in PyGame (event handling, update cycles, and rendering)
+- Game State management patterns for tracking game board and player turns
+- Modular code organization with separate files for different game components
+- Drawing game elements using PyGame's graphic primitives (lines, circles, rectangles)
+- Game win/draw condition detection using sum-based algorithms
+- Screen state management for handling different game screens
 
 ## 💡 First Time Achievements
-- First time using PyGamе
-- ...
+- [x] Created my first interactive game from scratch using PyGame 
+- [x] Implemented player input handling and game board mechanics
+- [x] Implemented grid-based game mechanics with mouse position detection
+- [x] Successfully created game state visualization system
 
 ## 🎨 Development Process
 ### Phase 1: ...
@@ -44,8 +51,7 @@ A classic Tic Tac Toe game built with PyGame - my first step into game developme
 
 ## 🛠️ Technical Details
 - Python version: 3.12
-- PyGame version: x.x.x
-- Key classes: Game, Board, Player
+- PyGame version: 2.6.1
 
 ## 📝 Notes for Future Me
 - What worked well:
