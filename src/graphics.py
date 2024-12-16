@@ -1,4 +1,3 @@
-import math
 
 from src import constants as c
 
@@ -72,10 +71,7 @@ def draw_start_screen(screen: pygame.Surface):
 def draw_title(screen: pygame.Surface):
     title_font = pygame.font.SysFont(c.TITLE_FONT, c.TITLE_FONT_SIZE)
     title_surface = title_font.render(c.TITLE_TEXT, True, c.TITLE_COLOR)
-    title_rect = title_surface.get_rect(
-        centerx=c.WINDOW_SIZE // 2,
-        y=c.TITLE_Y_POS
-    )
+    title_rect = title_surface.get_rect(centerx=c.WINDOW_SIZE // 2, y=c.TITLE_Y_POS)
 
     screen.blit(title_surface, title_rect)
 
@@ -85,7 +81,7 @@ def get_start_button_rect() -> pygame.Rect:
         (c.WINDOW_SIZE - c.START_BUTTON_WIDTH) // 2,
         (c.WINDOW_SIZE - c.START_BUTTON_HEIGHT * 2.5),
         c.START_BUTTON_WIDTH,
-        c.START_BUTTON_HEIGHT
+        c.START_BUTTON_HEIGHT,
     )
 
 

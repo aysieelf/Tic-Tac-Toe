@@ -1,7 +1,7 @@
-import pygame
-
-from src.graphics import draw_start_button, get_start_button_rect
+from src.graphics import get_start_button_rect
 from src.utils import get_cell_from_mouse
+
+import pygame
 
 
 class EventHandler:

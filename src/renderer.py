@@ -1,7 +1,7 @@
-import pygame
-
-from src.graphics import draw_start_screen, draw_board
 from src import constants as c
+from src.graphics import draw_board, draw_start_screen
+
+import pygame
 
 
 class Renderer:

@@ -1,9 +1,6 @@
-from src import constants as c
 from src.event_handler import EventHandler
 from src.game_state import GameState
-from src.graphics import draw_board, draw_title, draw_start_screen, draw_start_button
 from src.renderer import Renderer
-from src.utils import get_cell_from_mouse
 
 import pygame
 
