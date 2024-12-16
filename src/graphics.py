@@ -68,6 +68,7 @@ def draw_start_screen(screen: pygame.Surface):
     draw_title(screen)
     draw_start_button(screen)
 
+
 def draw_title(screen: pygame.Surface):
     title_font = pygame.font.SysFont(c.TITLE_FONT, c.TITLE_FONT_SIZE)
     title_surface = title_font.render(c.TITLE_TEXT, True, c.TITLE_COLOR)
@@ -78,13 +79,18 @@ def draw_title(screen: pygame.Surface):
 
     screen.blit(title_surface, title_rect)
 
-def draw_start_button(screen: pygame.Surface):
-    button_rect = pygame.Rect(
+
+def get_start_button_rect() -> pygame.Rect:
+    return pygame.Rect(
         (c.WINDOW_SIZE - c.START_BUTTON_WIDTH) // 2,
         (c.WINDOW_SIZE - c.START_BUTTON_HEIGHT * 2.5),
         c.START_BUTTON_WIDTH,
         c.START_BUTTON_HEIGHT
     )
+
+
+def draw_start_button(screen: pygame.Surface | None):
+    button_rect = get_start_button_rect()
 
     mouse_pos = pygame.mouse.get_pos()
     if button_rect.collidepoint(mouse_pos):
