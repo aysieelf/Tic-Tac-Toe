@@ -89,13 +89,15 @@ def draw_start_button(screen: pygame.Surface):
     mouse_pos = pygame.mouse.get_pos()
     if button_rect.collidepoint(mouse_pos):
         button_color = c.START_BUTTON_HOVER_COLOR
+        button_text_color = c.START_BUTTON_TITLE_HOVER_COLOR
     else:
         button_color = c.START_BUTTON_COLOR
+        button_text_color = c.START_BUTTON_TITLE_COLOR
 
     pygame.draw.rect(screen, button_color, button_rect)
 
     button_font = pygame.font.SysFont(None, c.START_BUTTON_FONT_SIZE)
-    button_surface = button_font.render(c.START_BUTTON_TEXT, True, c.TITLE_COLOR)
+    button_surface = button_font.render(c.START_BUTTON_TEXT, True, button_text_color)
     text_rect = button_surface.get_rect(center=button_rect.center)
 
     screen.blit(button_surface, text_rect)
