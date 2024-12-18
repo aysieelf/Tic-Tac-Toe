@@ -59,6 +59,9 @@ def draw_board(screen, game_state):
             elif game_state.grid[row][col] == -1:
                 draw_o(screen, row, col)
 
+    if game_state.game_over:
+        draw_game_over(screen, game_state)
+
 
 def draw_start_screen(screen: pygame.Surface):
     screen.fill(c.BACKGROUND_COLOR)
@@ -104,3 +107,28 @@ def draw_start_button(screen: pygame.Surface | None):
     screen.blit(button_surface, text_rect)
 
     return button_rect
+
+
+def draw_game_over(screen, game_state):
+    overlay = pygame.Surface((c.WINDOW_SIZE, c.WINDOW_SIZE))
+    overlay.set_alpha(200)
+    overlay.fill(c.BLACK)
+    screen.blit(overlay, (0, 0))
+
+    font = pygame.font.Font(None, c.FONT_SIZE)
+
+    if game_state.winner:
+        text = f"Player {game_state.winner} wins!"
+    else:
+        text = "It's a draw!"
+
+    text_surface = font.render(text, True, c.TEXT_COLOR)
+    text_rect = text_surface.get_rect(center=(c.WINDOW_SIZE // 2, c.WINDOW_SIZE // 2 - 30))
+    screen.blit(text_surface, text_rect)
+
+    small_font = pygame.font.Font(None, c.FONT_SIZE // 2)
+    restart_text = 'Press "R" to try again'
+    restart_surface = small_font.render(restart_text, True, c.TEXT_COLOR)
+    restart_rect = restart_surface.get_rect(
+        center=(c.WINDOW_SIZE // 2, c.WINDOW_SIZE // 2 + 20))
+    screen.blit(restart_surface, restart_rect)

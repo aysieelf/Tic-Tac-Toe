@@ -31,7 +31,15 @@ START_BUTTON_COLOR = (241, 220, 197)
 START_BUTTON_HOVER_COLOR = (114, 140, 105)
 START_BUTTON_FONT_SIZE = 32
 
+# GAME OVER SCREEN -------------------------------------------------------------
+FONT_SIZE = 48
+OVERLAY_COLOR = (0, 0, 0, 180)
+TEXT_COLOR = (255, 255, 255)
+
 
 # COLORS -----------------------------------------------------------------------
 BACKGROUND_COLOR = (248, 237, 235)
 GRID_COLOR = (244, 149, 149)
+BLACK = (0, 0, 0)
+
+
