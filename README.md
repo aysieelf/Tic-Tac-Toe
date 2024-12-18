@@ -3,12 +3,12 @@
 A classic Tic Tac Toe game built with PyGame - my first step into game development!
 
 ## ⏳ Current Progress
-[▓▓▓▓▓░░░░░] 52%
+[▓▓▓▓▓▓▓░░░] 74%
 
 - [x] Project setup
 - [x] Basic game mechanics
 - [x] Win/Draw logic
-- [ ] UI implementation
+- [x] UI implementation
 - [ ] Final polish
 
 ## 🎯 Project Goals
@@ -30,18 +30,15 @@ A classic Tic Tac Toe game built with PyGame - my first step into game developme
 - Drawing game elements using PyGame's graphic primitives (lines, circles, rectangles)
 - Game win/draw condition detection using sum-based algorithms
 - Screen state management for handling different game screens
+- Basic UI design with text rendering and button interaction
 
 ## 💡 First Time Achievements
 - [x] Created my first interactive game from scratch using PyGame 
 - [x] Implemented player input handling and game board mechanics
 - [x] Implemented grid-based game mechanics with mouse position detection
 - [x] Successfully created game state visualization system
-
-## 🎨 Development Process
-### Phase 1: ...
-
-## 🔧 Challenges Overcome
-- ...
+- [x] Implemented win/draw condition detection
+- [x] Created a simple UI with text rendering and button interaction
 
 ## 📸 Screenshots
 [Will add game screenshots here]
