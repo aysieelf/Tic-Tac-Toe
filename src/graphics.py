@@ -123,12 +123,15 @@ def draw_game_over(screen, game_state):
         text = "It's a draw!"
 
     text_surface = font.render(text, True, c.TEXT_COLOR)
-    text_rect = text_surface.get_rect(center=(c.WINDOW_SIZE // 2, c.WINDOW_SIZE // 2 - 30))
+    text_rect = text_surface.get_rect(
+        center=(c.WINDOW_SIZE // 2, c.WINDOW_SIZE // 2 - 30)
+    )
     screen.blit(text_surface, text_rect)
 
     small_font = pygame.font.Font(None, c.FONT_SIZE // 2)
     restart_text = 'Press "R" to try again'
     restart_surface = small_font.render(restart_text, True, c.TEXT_COLOR)
     restart_rect = restart_surface.get_rect(
-        center=(c.WINDOW_SIZE // 2, c.WINDOW_SIZE // 2 + 20))
+        center=(c.WINDOW_SIZE // 2, c.WINDOW_SIZE // 2 + 20)
+    )
     screen.blit(restart_surface, restart_rect)
