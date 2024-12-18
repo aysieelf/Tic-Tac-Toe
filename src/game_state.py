@@ -8,6 +8,7 @@ class GameState:
         self._game_over = False
         self._winner = None
         self._in_start_screen = True
+        self._scores = {"X": 0, "O": 0, "Draws": 0}
 
     @property
     def current_player(self) -> int:
@@ -24,6 +25,10 @@ class GameState:
     @property
     def in_start_screen(self) -> bool:
         return self._in_start_screen
+
+    @property
+    def scores(self) -> dict[str, int]:
+        return self._scores.copy()
 
     def start_game(self):
         self._in_start_screen = False
@@ -72,13 +77,14 @@ class GameState:
         if self._check_winner():
             self._game_over = True
             self._winner = "X" if self.current_player == -1 else "O"
+            self._scores[self._winner] += 1
 
         if self._check_draw():
             self._game_over = True
+            self._scores["Draws"] += 1
 
     def reset(self):
         self.grid = [[0] * c.GRID_SIZE for _ in range(c.GRID_SIZE)]
         self._current_player = 1
         self._game_over = False
         self._winner = None
-        self._in_start_screen = True
