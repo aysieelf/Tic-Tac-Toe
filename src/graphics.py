@@ -141,7 +141,9 @@ def draw_game_over(screen, game_state):
 def draw_score(screen, game_state):
     font = pygame.font.Font(None, c.SCORE_FONT_SIZE)
 
-    score_text = f"X: {game_state.scores['X']}      Draws: {game_state.scores['Draws']}      O: {game_state.scores['O']}"
+    score_text = (f"X: {game_state.scores['X']}      "
+                  f"Draws: {game_state.scores['Draws']}      "
+                  f"O: {game_state.scores['O']}")
 
     score_surface = font.render(score_text, True, c.SCORE_COLOR)
     score_rect = score_surface.get_rect(midtop=(c.WINDOW_SIZE // 2, c.SCORE_PADDING))
