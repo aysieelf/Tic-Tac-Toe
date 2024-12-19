@@ -2,8 +2,16 @@ from src import constants as c
 
 import pygame
 
+from src.game_state import GameState
 
-def draw_grid(screen):
+
+def draw_grid(screen: pygame.Surface) -> None:
+    """
+    Draw the grid on the screen. The grid is a 3x3 matrix of cells.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+    """
     # draw vertical lines
     for x in range(1, c.GRID_SIZE):
         pygame.draw.line(
@@ -25,7 +33,15 @@ def draw_grid(screen):
         )
 
 
-def draw_x(screen, row, col):
+def draw_x(screen: pygame.Surface, row: int, col: int) -> None:
+    """
+    Draw the X symbol on the screen at the specified row and column.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+        row (int): The row of the cell
+        col (int): The column of the cell
+    """
     x = col * c.CELL_SIZE
     y = row * c.CELL_SIZE
 
@@ -39,7 +55,15 @@ def draw_x(screen, row, col):
     pygame.draw.line(screen, c.X_COLOR, start_pos2, end_pos2, c.X_WIDTH)
 
 
-def draw_o(screen, row, col):
+def draw_o(screen: pygame.Surface, row: int, col: int) -> None:
+    """
+    Draw the O symbol on the screen at the specified row and column.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+        row (int): The row of the cell
+        col (int): The column of the cell
+    """
     x = col * c.CELL_SIZE
     y = row * c.CELL_SIZE
 
@@ -49,7 +73,15 @@ def draw_o(screen, row, col):
     pygame.draw.circle(screen, c.O_COLOR, center, radius, c.O_WIDTH)
 
 
-def draw_board(screen, game_state):
+def draw_board(screen: pygame.Surface, game_state: GameState) -> None:
+    """
+    Draw the game board on the screen. The game board consists of the grid,
+    X and O symbols, and the game over screen.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+        game_state (GameState): The current game state
+    """
     draw_grid(screen)
     draw_score(screen, game_state)
 
@@ -65,6 +97,12 @@ def draw_board(screen, game_state):
 
 
 def draw_start_screen(screen: pygame.Surface):
+    """
+    Draw the start screen on the screen.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+    """
     screen.fill(c.BACKGROUND_COLOR)
 
     draw_title(screen)
@@ -80,6 +118,12 @@ def draw_title(screen: pygame.Surface):
 
 
 def get_start_button_rect() -> pygame.Rect:
+    """
+    Get the rectangle of the start button.
+
+    Returns:
+        pygame.Rect: The rectangle of the start button
+    """
     return pygame.Rect(
         (c.WINDOW_SIZE - c.START_BUTTON_WIDTH) // 2,
         (c.WINDOW_SIZE - c.START_BUTTON_HEIGHT * 2.5),
@@ -88,7 +132,16 @@ def get_start_button_rect() -> pygame.Rect:
     )
 
 
-def draw_start_button(screen: pygame.Surface | None):
+def draw_start_button(screen: pygame.Surface | None) -> pygame.Rect:
+    """
+    Draw the start button on the screen.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+
+    Returns:
+        pygame.Rect: The rectangle of the start button
+    """
     button_rect = get_start_button_rect()
 
     mouse_pos = pygame.mouse.get_pos()
@@ -110,7 +163,14 @@ def draw_start_button(screen: pygame.Surface | None):
     return button_rect
 
 
-def draw_game_over(screen, game_state):
+def draw_game_over(screen: pygame.Surface, game_state: GameState) -> None:
+    """
+    Draw the game over screen on the screen.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+        game_state (GameState): The current game state
+    """
     overlay = pygame.Surface((c.WINDOW_SIZE, c.WINDOW_SIZE))
     overlay.set_alpha(200)
     overlay.fill(c.BLACK)
@@ -138,7 +198,14 @@ def draw_game_over(screen, game_state):
     screen.blit(instruction_surface, instruction_rect)
 
 
-def draw_score(screen, game_state):
+def draw_score(screen: pygame.Surface, game_state: GameState) -> None:
+    """
+    Draw the score on the screen.
+
+    Params:
+        screen (pygame.Surface): The screen to draw on
+        game_state (GameState): The current game state
+    """
     font = pygame.font.Font(None, c.SCORE_FONT_SIZE)
 
     score_text = (

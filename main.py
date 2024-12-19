@@ -5,7 +5,11 @@ from src.game_state import GameState
 import pygame
 
 
-def main():
+def main() -> None:
+    """
+    Main function to run the game.
+    Initializes the game and runs the game loop.
+    """
     pygame.init()
     screen = pygame.display.set_mode((c.WINDOW_SIZE, c.WINDOW_SIZE))
     game_state = GameState()
