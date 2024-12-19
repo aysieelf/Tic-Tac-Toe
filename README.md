@@ -2,6 +2,45 @@
 
 A classic Tic Tac Toe game built with PyGame - my first step into game development!
 
+## 🚀 Installation
+
+### Prerequisites
+- Python 3.12 or higher
+- pip (Python package installer)
+
+### Step-by-Step Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/aysieelf/tic-tac-toe.git
+   cd tic-tac-toe
+   ```
+
+2. Create and activate a virtual environment (recommended):
+   ```bash
+   # On Windows
+   python -m venv .venv
+   .venv\Scripts\activate
+
+   # On macOS/Linux
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running the Game
+```bash
+python main.py
+```
+
+### Controls
+- Mouse click to place X/O
+- R - Restart game
+- Q - Quit game
+
 ## ⏳ Current Progress
 [▓▓▓▓▓▓▓░░░] 74%
 
@@ -19,7 +58,6 @@ A classic Tic Tac Toe game built with PyGame - my first step into game developme
 ## 🚀 Features
 - Player vs Player gameplay
 - Clean minimalistic design
-- Game state tracking
 - Win/Draw detection
 - Restart game option
 
@@ -49,11 +87,6 @@ A classic Tic Tac Toe game built with PyGame - my first step into game developme
 ## 🛠️ Technical Details
 - Python version: 3.12
 - PyGame version: 2.6.1
-
-## 📝 Notes for Future Me
-- What worked well:
-- What could be improved:
-- Ideas for future enhancements:
 
 ---
 Part of my [Game Development Journey](https://github.com/aysieelf/Game-Dev-Journey) 🎮
