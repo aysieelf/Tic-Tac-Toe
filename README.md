@@ -61,6 +61,9 @@ python main.py
 - Win/Draw detection
 - Restart game option
 
+## 📚 Documentation
+- [User Guide](docs/user-guide.md) - Detailed instructions on how to play the game
+
 ## 📚 What I Learned
 - Game loop fundamentals in PyGame (event handling, update cycles, and rendering)
 - Game State management patterns for tracking game board and player turns
