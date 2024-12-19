@@ -13,6 +13,7 @@ class GameState:
         _in_start_screen (bool): Whether the game is in the start screen or not
         _scores (dict[str, int]): The scores of the game
     """
+
     def __init__(self):
         self.grid: list[list[int]] = [[0] * c.GRID_SIZE for _ in range(c.GRID_SIZE)]
         self._current_player: int = 1

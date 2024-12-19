@@ -16,6 +16,7 @@ class EventHandler:
         game_state (GameState): The current game state
         clicked (bool): Whether the mouse is clicked or not
     """
+
     def __init__(self, game_state: GameState) -> None:
         self.game_state = game_state
         self.clicked: bool = False

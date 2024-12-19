@@ -12,6 +12,7 @@ class Renderer:
     Attributes:
         screen (pygame.Surface): The screen to render on
     """
+
     def __init__(self, screen):
         self.screen = screen
 

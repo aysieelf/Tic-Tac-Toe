@@ -1,8 +1,7 @@
 from src import constants as c
+from src.game_state import GameState
 
 import pygame
-
-from src.game_state import GameState
 
 
 def draw_grid(screen: pygame.Surface) -> None:
