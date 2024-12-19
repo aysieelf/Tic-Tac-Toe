@@ -9,7 +9,7 @@ def draw_grid(screen: pygame.Surface) -> None:
     """
     Draw the grid on the screen. The grid is a 3x3 matrix of cells.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
     """
     # draw vertical lines
@@ -37,7 +37,7 @@ def draw_x(screen: pygame.Surface, row: int, col: int) -> None:
     """
     Draw the X symbol on the screen at the specified row and column.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
         row (int): The row of the cell
         col (int): The column of the cell
@@ -59,7 +59,7 @@ def draw_o(screen: pygame.Surface, row: int, col: int) -> None:
     """
     Draw the O symbol on the screen at the specified row and column.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
         row (int): The row of the cell
         col (int): The column of the cell
@@ -78,7 +78,7 @@ def draw_board(screen: pygame.Surface, game_state: GameState) -> None:
     Draw the game board on the screen. The game board consists of the grid,
     X and O symbols, and the game over screen.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
         game_state (GameState): The current game state
     """
@@ -100,7 +100,7 @@ def draw_start_screen(screen: pygame.Surface):
     """
     Draw the start screen on the screen.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
     """
     screen.fill(c.BACKGROUND_COLOR)
@@ -136,7 +136,7 @@ def draw_start_button(screen: pygame.Surface | None) -> pygame.Rect:
     """
     Draw the start button on the screen.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
 
     Returns:
@@ -167,7 +167,7 @@ def draw_game_over(screen: pygame.Surface, game_state: GameState) -> None:
     """
     Draw the game over screen on the screen.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
         game_state (GameState): The current game state
     """
@@ -202,7 +202,7 @@ def draw_score(screen: pygame.Surface, game_state: GameState) -> None:
     """
     Draw the score on the screen.
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to draw on
         game_state (GameState): The current game state
     """

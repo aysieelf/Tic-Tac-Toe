@@ -33,27 +33,36 @@ class EventHandler:
 
             if event.type == pygame.KEYDOWN:
                 self.handle_keyboard(event)
+                if not self.handle_keyboard(event):
+                    return False
 
             self.handle_mouse(event)
         return True
 
-    def handle_keyboard(self, event: pygame.event.Event) -> None:
+    def handle_keyboard(self, event: pygame.event.Event) -> bool:
         """
         Handle the keyboard events
 
-        Params:
+        Args:
             event (pygame.event): The event to handle
+                - R key: Resets the game
+                - Q key: Exits the game
+
+        Returns:
+            bool: True if the game should continue, False if the game should end
         """
         if event.key == pygame.K_r:
             self.game_state.reset()
         elif event.key == pygame.K_q:
             pygame.quit()
+            return False
+        return True
 
     def handle_mouse(self, event: pygame.event.Event) -> None:
         """
         Handle the mouse events
 
-        Params:
+        Args:
             event (pygame.event): The event to handle
         """
         if event.type == pygame.MOUSEBUTTONDOWN and not self.clicked:

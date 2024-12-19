@@ -6,7 +6,7 @@ def get_cell_from_mouse(pos: tuple) -> tuple[int, int]:
     Get the cell from the mouse position.
     The cell is represented by the row and column of the cell.
 
-    Params:
+    Args:
         pos (tuple): The position of the mouse
 
     Returns:

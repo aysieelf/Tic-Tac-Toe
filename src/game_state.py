@@ -52,7 +52,7 @@ class GameState:
         Make a move in the game. If the move is valid, update the grid,
         current player, and check if the game has ended.
 
-        Params:
+        Args:
             row (int): The row of the cell
             col (int): The column of the cell
 

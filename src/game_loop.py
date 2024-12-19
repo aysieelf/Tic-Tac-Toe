@@ -9,7 +9,7 @@ def game_loop(screen: pygame.Surface, game_state: GameState) -> None:
     """
     Handles the game loop
 
-    Params:
+    Args:
         screen (pygame.Surface): The screen to render
         game_state (GameState): The current game state
     """

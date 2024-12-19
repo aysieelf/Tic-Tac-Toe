@@ -19,7 +19,7 @@ class Renderer:
         """
         Render the game state on the screen
 
-        Params:
+        Args:
             game_state (GameState): The current game state
         """
         self.screen.fill(c.BACKGROUND_COLOR)
