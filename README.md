@@ -2,6 +2,22 @@
 
 A classic Tic Tac Toe game built with PyGame - my first step into game development!
 
+## 📑 Table of Contents
+- [Installation](#-installation)
+  - [Prerequisites](#prerequisites)
+  - [Step-by-Step Installation](#step-by-step-installation)
+  - [Running the Game](#running-the-game)
+  - [Controls](#controls)
+- [Current Progress](#-current-progress)
+- [Project Goals](#-project-goals)
+- [Features](#-features)
+- [Documentation](#-documentation)
+- [What I Learned](#-what-i-learned)
+- [First Time Achievements](#-first-time-achievements)
+- [Screenshots](#-screenshots)
+- [Demo](#-demo)
+- [Technical Details](#-technical-details)
+
 ## 🚀 Installation
 
 ### Prerequisites
@@ -42,13 +58,13 @@ python main.py
 - Q - Quit game
 
 ## ⏳ Current Progress
-[▓▓▓▓▓▓▓▓▓░] 90%
+[▓▓▓▓▓▓▓▓▓▓] 100%
 
 - [x] Project setup
 - [x] Basic game mechanics
 - [x] Win/Draw logic
 - [x] UI implementation
-- [ ] Final polish
+- [x] Final polish
 
 ## 🎯 Project Goals
 - Create a fully functional Tic-Tac-Toe game
@@ -95,7 +111,7 @@ python main.py
 ![Draw Game](assets/screenshots/draw_game_20241221_124114.png)
 
 ## 🎥 Demo
-[Will add gif/video demo here]
+![Demo](assets/demo/tic-tac-toe-demo.gif)
 
 ## 🛠️ Technical Details
 - Python version: 3.12
