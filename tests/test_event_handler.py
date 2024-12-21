@@ -97,7 +97,7 @@ class EventHandlerShould(unittest.TestCase):
         mock_event = Mock()
         mock_event.type = pygame.MOUSEBUTTONUP
 
-        with patch.object(self.event_handler, 'process_click') as mock_process_click:
+        with patch.object(self.event_handler, 'process_click'):
             self.event_handler.handle_mouse(mock_event)
 
         self.assertFalse(self.event_handler.clicked)
@@ -128,7 +128,7 @@ class EventHandlerShould(unittest.TestCase):
 
             mock_handle_game_click.assert_called_once()
 
-    def test_handleStartScreenClick_setsInStartScreenToTrue_whenClickIsOnButton(self):
+    def test_handleStartScreenClick_setsInStartScreenToTrue_whenClickOnButton(self):
         self.game_state._in_start_screen = True
         mock_button_rect = Mock()
         mock_button_rect.collidepoint.return_value = True
@@ -141,7 +141,7 @@ class EventHandlerShould(unittest.TestCase):
             mock_button_rect.collidepoint.assert_called_once_with(mock_pos)
             self.assertFalse(self.game_state.in_start_screen)
 
-    def test_handleStartScreenClick_doesNotSetInStartScreenToTrue_whenMousePosNotInButtonRect(self):
+    def test_handleStartScreenClick_doesNotSetInStartScreenToTrue_whenClickNotOnButton(self):
         self.game_state._in_start_screen = True
         mock_button_rect = Mock()
         mock_button_rect.collidepoint.return_value = False
@@ -156,8 +156,8 @@ class EventHandlerShould(unittest.TestCase):
 
     def test_handleGameClick_callsMakeMoveWithRowAndCol(self):
         mock_pos = (0, 0)
-        with patch('pygame.mouse.get_pos', return_value=mock_pos) as mock_get_pos, \
-                patch('src.utils.get_cell_from_mouse', return_value=mock_pos) as mock_get_cell, \
+        with patch('pygame.mouse.get_pos', return_value=mock_pos), \
+                patch('src.utils.get_cell_from_mouse', return_value=mock_pos), \
                 patch.object(self.game_state, 'make_move') as mock_make_move:
             self.event_handler.handle_game_click()
 
