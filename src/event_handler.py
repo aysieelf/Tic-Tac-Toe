@@ -14,12 +14,16 @@ class EventHandler:
 
     Attributes:
         game_state (GameState): The current game state
-        clicked (bool): Whether the mouse is clicked or not
+        _clicked (bool): Whether the mouse is clicked or not
     """
 
     def __init__(self, game_state: GameState) -> None:
         self.game_state = game_state
-        self.clicked: bool = False
+        self._clicked: bool = False
+
+    @property
+    def clicked(self) -> bool:
+        return self._clicked
 
     def handle_events(self) -> bool:
         """
@@ -33,8 +37,8 @@ class EventHandler:
                 return False
 
             if event.type == pygame.KEYDOWN:
-                self.handle_keyboard(event)
-                if not self.handle_keyboard(event):
+                continue_game = self.handle_keyboard(event)
+                if not continue_game:
                     return False
 
             self.handle_mouse(event)
@@ -66,10 +70,10 @@ class EventHandler:
         Args:
             event (pygame.event): The event to handle
         """
-        if event.type == pygame.MOUSEBUTTONDOWN and not self.clicked:
-            self.clicked = True
-        if event.type == pygame.MOUSEBUTTONUP and self.clicked:
-            self.clicked = False
+        if event.type == pygame.MOUSEBUTTONDOWN and not self._clicked:
+            self._clicked = True
+        if event.type == pygame.MOUSEBUTTONUP and self._clicked:
+            self._clicked = False
             self.process_click()
 
     def process_click(self) -> None:

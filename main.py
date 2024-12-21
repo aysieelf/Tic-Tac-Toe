@@ -21,11 +21,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
-# TODO: Add tests for the game
-"""
-- game_state.py
-- utils.py
-- event_handler.py
-"""
