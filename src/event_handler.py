@@ -1,8 +1,10 @@
+import pygame
+
 from src.game_state import GameState
 from src.graphics import get_start_button_rect
 from src.utils import get_cell_from_mouse
+from src.screenshot_utils import ScreenshotManager
 
-import pygame
 
 
 class EventHandler:
@@ -20,6 +22,7 @@ class EventHandler:
     def __init__(self, game_state: GameState) -> None:
         self.game_state = game_state
         self._clicked: bool = False
+        self.screenshot_manager = ScreenshotManager()
 
     @property
     def clicked(self) -> bool:
@@ -61,6 +64,12 @@ class EventHandler:
         elif event.key == pygame.K_q:
             pygame.quit()
             return False
+        elif event.key == pygame.K_s:
+            if hasattr(self, 'screenshot_manager'):
+                self.screenshot_manager.capture_game_state(
+                    pygame.display.get_surface(),
+                    self.game_state
+                )
         return True
 
     def handle_mouse(self, event: pygame.event.Event) -> None:

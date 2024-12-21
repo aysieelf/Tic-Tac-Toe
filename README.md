@@ -82,7 +82,17 @@ python main.py
 - [x] Created a simple UI with text rendering and button interaction
 
 ## 📸 Screenshots
-[Will add game screenshots here]
+
+### Start Screen
+![Start Screen](assets/screenshots/start_screen_20241221_123740.png)
+
+### Gameplay
+![Empty Board](assets/screenshots/empty_board_20241221_123815.png)
+![Game in Progress](assets/screenshots/game_in_progress_moves_5_20241221_124043.png)
+
+### Game Over States
+![X Wins](assets/screenshots/X_wins_20241221_124053.png)
+![Draw Game](assets/screenshots/draw_game_20241221_124114.png)
 
 ## 🎥 Demo
 [Will add gif/video demo here]
