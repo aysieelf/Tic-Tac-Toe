@@ -42,7 +42,7 @@ python main.py
 - Q - Quit game
 
 ## ⏳ Current Progress
-[▓▓▓▓▓▓▓░░░] 74%
+[▓▓▓▓▓▓▓▓▓░] 90%
 
 - [x] Project setup
 - [x] Basic game mechanics
