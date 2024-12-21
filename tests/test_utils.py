@@ -1,5 +1,7 @@
 import unittest
+
 from src.utils import get_cell_from_mouse
+
 
 class UtilsShould(unittest.TestCase):
     def test_getCellFromMouse_returnsRowCol(self):

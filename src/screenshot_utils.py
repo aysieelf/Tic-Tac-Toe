@@ -1,6 +1,8 @@
-import os
 from datetime import datetime
+import os
+
 import pygame
+
 
 class ScreenshotManager:
     def __init__(self, base_path="assets/screenshots"):

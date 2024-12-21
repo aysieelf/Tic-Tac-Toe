@@ -14,7 +14,10 @@ class GameStateShould(unittest.TestCase):
 
     def test_init_createsGrid(self):
         game_state = GameState()
-        self.assertEqual([[0, 0, 0], [0, 0, 0], [0, 0, 0]], game_state.grid, )
+        self.assertEqual(
+            [[0, 0, 0], [0, 0, 0], [0, 0, 0]],
+            game_state.grid,
+        )
 
     def test_init_createsGameOverFalse(self):
         game_state = GameState()
@@ -30,7 +33,10 @@ class GameStateShould(unittest.TestCase):
 
     def test_init_createsScores(self):
         game_state = GameState()
-        self.assertEqual({"X": 0, "O": 0, "Draws": 0}, game_state.scores, )
+        self.assertEqual(
+            {"X": 0, "O": 0, "Draws": 0},
+            game_state.scores,
+        )
 
     def test_startGame_setsInStartScreenFalse(self):
         game_state = GameState()
@@ -151,5 +157,3 @@ class GameStateShould(unittest.TestCase):
         game_state._winner = "X"
         game_state.reset()
         self.assertIsNone(game_state.winner)
-
-
