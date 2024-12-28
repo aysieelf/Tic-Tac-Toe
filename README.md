@@ -57,15 +57,6 @@ python main.py
 - R - Restart game
 - Q - Quit game
 
-## ⏳ Current Progress
-[▓▓▓▓▓▓▓▓▓▓] 100%
-
-- [x] Project setup
-- [x] Basic game mechanics
-- [x] Win/Draw logic
-- [x] UI implementation
-- [x] Final polish
-
 ## 🎯 Project Goals
 - Create a fully functional Tic-Tac-Toe game
 - Learn PyGame basics
